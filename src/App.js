@@ -113,10 +113,12 @@ function App() {
             <FormGroup>
             <input type="text" placeholder="Name..." onChange={handleChange("name")}/>
             <input type="number" placeholder="Number..."  onChange={handleChange("number")}/>
-            <FormControlLabel
-                control={<Switch checked={state.checkedA} onChange={handleChange("coolness")} />}
-                label="Cool?"
-            />
+                <input
+                    type="checkbox"
+                    name="coolness"
+                    defaultValue
+                    onChange={handleChange}
+                />
             <button onClick={submit}>Submit</button>
             </FormGroup>
         </div>
